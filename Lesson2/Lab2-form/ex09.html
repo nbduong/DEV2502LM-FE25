@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="#" method="post" enctype="multipart/form-data">
+        <h3 style="font-family: Arial, Helvetica, sans-serif;">Thêm sản phẩm mới</h3>
+        <div style="display: flex; flex-direction: column; width: 50%;">
+            <div style="display: flex; margin-top: 10px;">
+                <div style="width: 20%; padding: 5px; border: 1px solid black;">Mã sản phẩm</div>
+                <input type="text" name="id" id="id" style="width: 80%; border: none;">
+            </div>
+            <div style="display: flex; margin-top: 10px;">
+                <div style="width: 20%; padding: 5px; border: 1px solid black;">Tên sản phẩm</div>
+                <input type="text" name="name" id="name" style="width: 80%; border: none;">
+            </div>
+            <div style="display: flex; margin-top: 10px;">
+                <div style="width: 20%; padding: 5px; border: 1px solid black;">URL</div>
+                <input type="text" name="url" id="url" style="width: 80%; border: none;">
+            </div>
+            <div style="display: flex; margin-top: 10px;">
+                <div for="type" style="width: 19%; padding: 5px; border: 1px solid black;">Loại sản phẩm</div>
+                <select name="type" id="type" style="width: 81%; border: none;">
+                    <option value="1">PHÒNG KHÁCH</option>
+                    <option value="2">PHÒNG NGỦ</option>
+                    <option value="3">PHÒNG BẾP</option>
+                </select>
+            </div>
+            <div style=" display: flex; width: 100%; margin-top: 10px;">
+                <inline for="oldprice" style="width: 13%; padding: 5px; border: 1px solid black;">Giá cũ</inline>
+                <input type="text" name="oldprice" id="oldprice" placeholder="0" style="width: 20%; border: none;">
+                <inline for="newprice" style="width: 13%; padding: 5px; border: 1px solid black;">Giá cũ</inline>
+                <input type="text" name="newprice" id="newprice" placeholder="0" style="width: 20%; border: none;">
+                <inline for="size" style="width: 13%; padding: 5px; border: 1px solid black;">Giá cũ</inline>
+                <input type="text" name="size" id="size" style="width: 20%; border: none;">
+            </div>
+            <div>Mô tả sản phẩm</div>
+            <textarea name="detail" id="detail" cols="30" rows="10"></textarea>
+        </div>
+    </form>
+</body>
+
+</html>
