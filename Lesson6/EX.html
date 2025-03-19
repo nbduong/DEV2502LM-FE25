@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- câu 1 -->
+    <p>1. In ra ngoài màn hình số từ 5 đến 10</p>
+    <p id="cau1">Kết quả:</p>
+    <!-- Câu 2 -->
+    <p>2. In ra ngoài màn hình số chính phương nhỏ hơn 100</p>
+    <p id="cau2">Kết quả:</p>
+    <!-- Câu 3 -->
+    <p>
+      3. Nhập số liệu từ màn hình và in ra các số chia hết cho 5 nhỏ hơn số vừa
+      nhập và lớn hơn 0
+    </p>
+    <label for="cau3-input">Nhập số nguyên: </label
+    ><input type="text" name="cau3-input" id="cau3-input" onchange="cau3()" />
+    <p id="cau3">Kết quả:</p>
+    <!-- câu 4 -->
+    <p>
+      4. Viết chương trình và biện luận phương trình bậc 1 có dạng: ax+b = 0
+    </p>
+    <label for="cau4-input-a">Nhập số a: </label
+    ><input type="text" name="cau4-input-a" id="cau4-input-a" />
+    <br />
+    <label for="cau4-input-b">Nhập số b: </label
+    ><input type="text" name="cau4-input-b" id="cau4-input-b" />
+    <br />
+    <button onclick="cau4()">Tính</button>
+    <p id="cau4"></p>
+    <!-- câu 5 -->
+    <p>
+      5. Viết chương trình và biện luận phương trình bậc 2 có dạng: ax^2 + bx +c
+      =0
+    </p>
+    <label for="cau5-input-a">Nhập số a: </label
+    ><input type="text" name="cau5-input-a" id="cau5-input-a" />
+    <br />
+    <label for="cau5-input-b">Nhập số b: </label
+    ><input type="text" name="cau5-input-b" id="cau5-input-b" />
+    <br />
+    <label for="cau5-input-c">Nhập số c: </label
+    ><input type="text" name="cau5-input-c" id="cau5-input-c" />
+    <br />
+    <button onclick="cau5()">Tính</button>
+    <p id="cau5"></p>
+    <!-- câu 6 -->
+    <p>
+      6. Nhập vào một số bất kỳ, In ra màn hình các số nguyên tố nhỏ hơn số vừa
+      nhập
+    </p>
+    <label for="cau6-input-a">Nhập số bất kỳ: </label
+    ><input
+      type="text"
+      name="cau6-input-a"
+      id="cau6-input-a"
+      onchange="cau6()"
+    />
+    <br />
+    <p id="cau6">kết quả:</p>
+    <!-- câu 7 -->
+    <p>
+      7. Nhập vào một số bất kỳ In ra màn hình các số chia hết cho 3 và nhỏ hơn
+      số vừa nhập
+    </p>
+    <label for="cau7-input">Nhập số bất kỳ: </label
+    ><input type="text" name="cau7-input" id="cau7-input" onchange="cau7()" />
+    <p id="cau7">Kết quả:</p>
+    <!-- câu 8 -->
+    <p>
+      8. Nhập vào một ký tự bất kỳ. Kiểm tra đó có phải là kiểu số hay không?
+      Nếu đúng đưa về thông báo true Nếu sai yêu cầu nhập lại
+    </p>
+    <label for="cau8-input">Input: </label
+    ><input type="text" name="cau8-input" id="cau8-input" onchange="cau8()" />
+    <p id="cau8">Kết quả:</p>
+
+    <script>
+      var cau1 = document.getElementById("cau1");
+      for (var i = 5; i <= 10; i++) {
+        var cau1 = document.getElementById("cau1");
+        cau1.innerText += " " + i;
+      }
+      for (var i = 1; i < 100; i++) {
+        if (Number.isInteger(Math.sqrt(i)) == true) {
+          var cau2 = document.getElementById("cau2");
+          cau2.innerText += " " + i;
+        }
+      }
+      function cau3() {
+        var temp = document.getElementById("cau3-input").value;
+        var cau3 = document.getElementById("cau3");
+        cau3.innerText = "Kết quả: ";
+        for (var i = 1; i < temp; i++) {
+          if (i % 5 == 0) {
+            var cau3 = document.getElementById("cau3");
+            cau3.innerText += " " + i;
+          }
+        }
+      }
+
+      function cau4() {
+        var a = document.getElementById("cau4-input-a").value;
+        var b = document.getElementById("cau4-input-b").value;
+        var result = document.getElementById("cau4");
+        if (a === 0) {
+          if (b === 0) {
+            result.innerText = "Phương trình có vô số nghiệm.";
+          } else {
+            result.innerText = "Phương trình vô nghiệm.";
+          }
+        } else {
+          var x = -b / a;
+          result.innerText = `Phương trình có nghiệm x = ${x}`;
+        }
+      }
+
+      function cau5() {
+        var a = parseFloat(document.getElementById("cau5-input-a").value);
+        var b = parseFloat(document.getElementById("cau5-input-b").value);
+        var c = parseFloat(document.getElementById("cau5-input-c").value);
+        var result = document.getElementById("cau5");
+
+        if (a === 0) {
+          if (b === 0) {
+            result.innerText =
+              c === 0
+                ? "Phương trình có vô số nghiệm."
+                : "Phương trình vô nghiệm.";
+          } else {
+            result.innerText = `Phương trình có nghiệm x = ${-c / b}`;
+          }
+          return;
+        }
+
+        var delta = b * b - 4 * a * c;
+        if (delta < 0) {
+          result.innerText = "Phương trình vô nghiệm.";
+        } else if (delta === 0) {
+          result.innerText = `Phương trình có nghiệm kép x = ${-b / (2 * a)}`;
+        } else {
+          var x1 = (-b + Math.sqrt(delta)) / (2 * a);
+          var x2 = (-b - Math.sqrt(delta)) / (2 * a);
+          result.innerText = `Phương trình có hai nghiệm: x1 = ${x1}, x2 = ${x2}`;
+        }
+      }
+
+      function kiemTraNguyenTo(n) {
+        if (n < 2) return false;
+        for (let i = 2; i <= Math.sqrt(n); i++) {
+          if (n % i === 0) return false;
+        }
+        return true;
+      }
+
+      function cau6() {
+        var result = document.getElementById("cau6");
+        var a = parseFloat(document.getElementById("cau6-input-a").value);
+        result.innerText = "Kết quả:";
+        for (i = 2; i < a; i++) {
+          if (kiemTraNguyenTo(i) == true) {
+            result.innerText += " " + i;
+          }
+        }
+      }
+
+      function cau7() {
+        var temp = document.getElementById("cau7-input").value;
+        var cau7 = document.getElementById("cau7");
+        cau7.innerText = "Kết quả: ";
+        for (var i = 1; i < temp; i++) {
+          if (i % 3 == 0) {
+            var cau7 = document.getElementById("cau7");
+            cau7.innerText += " " + i;
+          }
+        }
+      }
+
+      function cau8() {
+        var temp = document.getElementById("cau8-input").value;
+        var cau8 = document.getElementById("cau8");
+
+        // Chuyển chuỗi thành số
+        var number = Number(temp);
+
+        cau8.innerText = "Kết quả: ";
+
+        // Kiểm tra xem có phải số hợp lệ không (loại bỏ NaN)
+        if (!isNaN(number)) {
+          cau8.innerText += "True";
+        } else {
+          cau8.innerText += "Hãy nhập lại";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>DOM SCRPIT</title>
+  </head>
+  <body>
+    <script>
+      var emp = {
+        name: "",
+        email: "",
+        age: "",
+        laytuoi: function () {
+          return this.age;
+        },
+      };
+
+      emp.name = "duong";
+      emp.email = "123@gmail.com";
+      emp.age = 20;
+      document.writeln(emp.name);
+      document.writeln(emp.email);
+      document.writeln(emp.laytuoi());
+    </script>
+  </body>
+</html>

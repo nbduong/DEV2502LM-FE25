@@ -2,118 +2,117 @@ nav,
 nav ul,
 nav li,
 nav a {
-    margin: 0;
-    padding: 0;
-    border: none;
-    outline: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
 }
 
 nav ul {
-    height: 40px;
-    background: #4c4e5a;
+  height: 40px;
+  background: #4c4e5a;
 
-    background: -webkit-linear-gradient(top, #4c4e5a 0%, #2c2d33 100%);
-    background: -moz-linear-gradient(top, #4c4e5a 0%, #2c2d33 100%);
-    background: -o-linear-gradient(top, #4c4e5a 0%, #2c2d33 100%);
-    background: linear-gradient(top, #4c4e5a 0%, #2c2d33 100%);
+  background: -webkit-linear-gradient(top, #4c4e5a 0%, #2c2d33 100%);
+  background: -moz-linear-gradient(top, #4c4e5a 0%, #2c2d33 100%);
+  background: -o-linear-gradient(top, #4c4e5a 0%, #2c2d33 100%);
+  background: linear-gradient(top, #4c4e5a 0%, #2c2d33 100%);
 
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
 
 nav ul li {
-    position: relative;
-    list-style: none;
-    display: block;
-    height: 40px;
-    float: left;
+  position: relative;
+  list-style: none;
+  display: block;
+  height: 40px;
+  float: left;
 }
 
 nav ul li a {
-    display: block;
-    padding: 0 14px;
-    margin: 6px 0;
-    Line-height: 28px;
-    text-decoration: none;
-    border-Left: 1px solid #393942;
-    border-right: 1px solid #4f5058;
-    font-family: Helvetica, Arial, sans-serif;
-    font-weight: bold;
-    font-size: 13px;
-    coLor: #f3f3f3;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 6);
+  display: block;
+  padding: 0 14px;
+  margin: 6px 0;
+  line-height: 28px;
+  text-decoration: none;
+  border-left: 1px solid #393942;
+  border-right: 1px solid #4f5058;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 13px;
+  color: #f3f3f3;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 6);
 
-    -webkit-transition: color .2s ease-in-out;
-    -moz-transition: color .2s ease-in-out;
-    -o-transition: color .2s ease-in-out;
-    -ms-transition: color .2s ease-in-out;
-    transition: color .2s ease-in-out;
+  -webkit-transition: color 0.2s ease-in-out;
+  -moz-transition: color 0.2s ease-in-out;
+  -o-transition: color 0.2s ease-in-out;
+  -ms-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 
 nav ul li :first-child a {
-    border-left: none;
+  border-left: none;
 }
 
 nav ul li :last-child a {
-    border-right: none;
+  border-right: none;
 }
 
-nav ul li:hover>a {
-    color: #8fde62;
+nav ul li:hover > a {
+  color: #8fde62;
 }
 
 ul.submenu {
-    position: relative;
-    left: 0;
-    width: 100px;
-    opacity: 0;
-    background: #1f2024;
-    -webkit-border-radius: 0 0 5px 5px;
-    -moz-border-radius: 0 0 5px 5px;
-    border-radius: 0 0 5px 5px;
+  position: absolute;
+  left: 0;
+  width: 100px;
+  opacity: 0;
+  background: #1f2024;
+  -webkit-border-radius: 0 0 5px 5px;
+  -moz-border-radius: 0 0 5px 5px;
+  border-radius: 0 0 5px 5px;
 
-    -webkit-transition: opacity .25s ease .1s;
-    -moz-transition: opacity .25s ease .1s;
-    -o-transition: opacity .25s ease .1s;
-    -ms-transition: opacity .25s ease .1s;
-    transition: opacity .25% ease .1s;
+  -webkit-transition: opacity 0.25s ease 0.1s;
+  -moz-transition: opacity 0.25s ease 0.1s;
+  -o-transition: opacity 0.25s ease 0.1s;
+  -ms-transition: opacity 0.25s ease 0.1s;
+  transition: opacity 0.25% ease 0.1s;
 }
 
-nav ul li:hover>ul.submenu {
-    opacity: 10;
-    height: auto;
+nav ul li:hover > ul.submenu {
+  opacity: 10;
+  height: auto;
 }
 
 ul.submenu li a {
-    border: none;
+  border: none;
 }
 
 .submenu li {
-    width: 100%;
-    border-bottom: 1px solid #393942;
-
+  width: 100%;
+  border-bottom: 1px solid #393942;
 }
 
 .submenu li:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .submenu li a {
-    width: 100%;
-    padding: 4px 0px 4px 40px;
-    margin: 0;
-    border: none;
+  width: 100%;
+  padding: 4px 0px 4px 40px;
+  margin: 0;
+  border: none;
 }
 
 .submenu a.css3 {
-    background: url(docs.png) no-repeat 3px center;
+  background: url(docs.png) no-repeat 3px center;
 }
 
 .submenu a.html5 {
-    background: url(bubble.png) no-repeat 3px center;
+  background: url(bubble.png) no-repeat 3px center;
 }
 
 .submenu a.php {
-    background: url(arrow.png) no-repeat 3px center;
+  background: url(arrow.png) no-repeat 3px center;
 }

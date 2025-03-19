@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom lab</title>
+  </head>
+  <body>
+    <h2 id="title" class="dev">Devmaster</h2>
+    <h2 id="title">Dev master</h2>
+    <button onclick="changecolor('black')">Đen</button>
+    <button onclick="changecolor('red')">Đỏ</button>
+    <button onclick="changecolor('yellow')">Vàng</button>
+    <button onclick="changecolor('violet')">Tím</button>
+    <script>
+      function changecolor(color) {
+        var temp = document.getElementsByClassName("dev")[0];
+        temp.style.color = color;
+      }
+    </script>
+  </body>
+</html>

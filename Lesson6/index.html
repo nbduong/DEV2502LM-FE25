@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array in JS</title>
+  </head>
+  <body>
+    <script>
+      // Array
+      var arr = new Array(1, 2, 3, 4);
+      document.writeln(arr[2]);
+
+      function check(number) {
+        if (number % 2 == 0) {
+          document.writeln("so chan");
+        } else {
+          document.writeln("so le");
+        }
+      }
+      check(3);
+
+      check(4);
+      function ting_tong(a, b) {
+        return a + b;
+      }
+
+      var tong = ting_tong(arr[2], arr[3]);
+      document.writeln(tong);
+
+      function tinh_toan(a, b, pheptinh) {
+        if (pheptinh == "+") {
+          return a + b;
+        } else if (pheptinh == "-") {
+          return a - b;
+        } else if (pheptinh == "x") {
+          return a * b;
+        } else if (pheptinh == "/") {
+          return a / b;
+        } else {
+          alert("sai dinh dang");
+        }
+      }
+
+      var tingtoan = tinh_toan(arr[3], arr[1], "x");
+      document.writeln(tingtoan);
+      var tingtoan = tinh_toan(arr[3], arr[1], "-");
+      document.writeln(tingtoan);
+    </script>
+  </body>
+</html>
