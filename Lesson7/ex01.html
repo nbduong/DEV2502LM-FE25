@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <style>
+        #main {
+            border: solid 1px #ccc;
+            padding: 10px;
+            width: 350px;
+        }
+
+        .clearfix {
+            overflow: hidden;
+            clear: both;
+        }
+
+        #main ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #main ul li {
+            float: left;
+        }
+
+        #main ul li a {
+            display: block;
+            border: solid 1px #ccc;
+            padding: 5px 10px;
+            text-decoration: none;
+            margin-right: 5px;
+        }
+
+        #content {
+            padding: 15px 0;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .maudo {
+            color: red;
+        }
+
+        .mauxanh {
+            color: green;
+        }
+
+        .mauvang {
+            color: yellow;
+        }
+
+        .maughi {
+            color: #666;
+        }
+
+        .mautim {
+            color: violet;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("a").click(function (e) {
+                mau = e.target.id;
+                $("#content").addClass(mau);
+            })
+        })
+    </script>
+</head>
+
+<body>
+
+    <body>
+        <div id="main">
+            <h3>Chọn màu chữa</h3>
+            <ul class="clearfix">
+                <li><a href="javascript:void(0)" id="maudo">Ɖó</a></li>
+                <li><a href="javascript:void(0)" id="mauxanh">Xanh</a></li>
+                <li><a href="javascript:void(0)" id="mauvang">Vàng</a></li>
+                <li><a href="javascript:void(0)" id="maughi">Ghi</a></li>
+                <li><a href="javascript:void(0)" id="mautim">Tím</a></li>
+            </ul>
+            <div id="content" class="clearfix">Lập trình web với PHP</div>
+        </div>
+    </body>
+</body>
+
+</html>

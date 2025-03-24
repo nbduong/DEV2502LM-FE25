@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        #main {
+            width: 670px;
+            height: 446px;
+            margin: 0 auto;
+        }
+
+        #thum ul li {
+            float: left;
+            margin-right: 2px;
+        }
+
+        #thum ul li a img {
+            width: 105px;
+            border: solid 2px #ccc;
+        }
+
+        .actived {
+            border: solid 4px red !important;
+        }
+
+        #thum ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+    <script>
+        $(document).ready(function ($) {
+            $("a>img").click(function (event) {
+                img = $(this).attr('src');
+                $("#image > img").attr({
+                    'src': img
+                })
+                $("a>img").removeClass('actived');
+                $(this).addClass('actived');
+            })
+        })
+    </script>
+</head>
+
+<body>
+
+    <body>
+        <div id="main">
+            <div id="image">
+                <img src="/Lesson4/images/tintuc-4.png" alt="">
+            </div>
+            <div id="thum">
+                <ul>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <img src="/Lesson4/images/tintuc-4.png" alt="" class="actived">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <img src="/Lesson4/images/tintuc-5.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <img src="/Lesson4/images/tintuc-6.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <img src="/Lesson4/images/tintuc-7.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <img src="/Lesson4/images/tintuc-8.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <img src="/Lesson4/images/tintuc-9.png" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</body>
+
+</html>
