@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Information</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Login Information</h2>
+      <form id="loginForm">
+        <label>Username:</label>
+        <input type="text" id="username" />
+        <div class="error" id="usernameError"></div>
+
+        <label>Password:</label>
+        <input type="password" id="password" />
+        <div class="error" id="passwordError"></div>
+
+        <div class="checkbox-container">
+          <input type="checkbox" id="rememberMe" />
+          <label for="rememberMe">Remember Set</label>
+        </div>
+
+        <button type="submit" class="login-btn">Login</button>
+        <button type="reset" class="reset-btn">Reset</button>
+      </form>
+    </div>
+
+    <script>
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (event) {
+          let isValid = true;
+          let username = document.getElementById("username").value.trim();
+          let password = document.getElementById("password").value.trim();
+          let usernameError = document.getElementById("usernameError");
+          let passwordError = document.getElementById("passwordError");
+
+          usernameError.textContent = "";
+          passwordError.textContent = "";
+
+          if (username === "") {
+            usernameError.textContent = "Invalid Username or password";
+            isValid = false;
+          } else if (password.length < 6) {
+            passwordError.textContent = "Password phải có ít nhất 6 ký tự!";
+            isValid = false;
+          } else {
+            alert("Welcome to world of JavaScript");
+          }
+
+          if (!isValid) {
+            event.preventDefault();
+          }
+        });
+    </script>
+  </body>
+</html>
