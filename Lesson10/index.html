@@ -12,6 +12,12 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/layout.css">
+    <!-- Slick CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- Slick theme (tùy chọn) -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
 </head>
 
 <body>
@@ -39,9 +45,10 @@
         <div class="container">
             <div class="banner-content">
                 <h2 class="text-uppercase">Thế giới nội thất số 1 việt nam
+                    <br>
                     <span>Hoàng Hoan</span>
                 </h2>
-                <p class="text-uppercase">Sứ mệnh của chúng tôi là kết hợp hài hòa giữa ý tưởng và mong muốn của khách
+                <p>Sứ mệnh của chúng tôi là kết hợp hài hòa giữa ý tưởng và mong muốn của khách
                     hàng, đem lại những phút
                     giây thư giãn
                     tuyệt vời bên gia đình và những người thân yêu.</p>
@@ -49,12 +56,125 @@
             </div>
         </div>
     </section>
+
+    <section id="category">
+        <div class="container">
+            <div class="row category-content">
+                <div class="col-3">
+                    <img src="./img/dm_phongkhach.jpg" alt="dm_phongkhach.jpg" srcset="">
+                    <p>Phòng khách</p>
+                </div>
+                <div class="col-3">
+                    <img src="./img/dm_phongngu.jpg" alt="dm_phongngu.jpg" srcset="">
+                    <p>Phòng ngủ</p>
+                </div>
+                <div class="col-3">
+                    <img src="./img/dm_phongbep.jpg" alt="dm_phongbep.jpg" srcset="">
+                    <p>Phòng bếp</p>
+                </div>
+                <div class="col-3">
+                    <img src="./img/dm_phongtam.jpg" alt="dm_phongtam.jpg" srcset="">
+                    <p>Phòng tắm</p>
+                </div>
+                <div class="col-3">
+                    <img src="./img/dm_treem.jpg" alt="dm_treem.jpg" srcset="">
+                    <p>Trẻ em</p>
+                </div>
+                <div class="col-3">
+                    <img src="./img/dm_vanphong.jpg" alt="dm_vanphong.jpg" srcset="">
+                    <p>Văn phòng</p>
+                </div>
+                <div class="col-3">
+                    <img src="./img/dm_cauthang.jpg" alt="dm_cauthang.jpg" srcset="">
+                    <p>Cầu thang</p>
+                </div>
+                <div class="col-3">
+                    <img src="./img/dm_dotrangtri.jpg" alt="dm_dotrangtri.jpg" srcset="">
+                    <p>Đồ trang trí</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="featured-products">
+        <div class="container">
+            <div class="carousel">
+                <div>
+                    <img src="./img/AnhCatTC/san-pham-noi-bat/sp-1.jpg" alt="sp-1.jpg">
+                </div>
+                <div>
+                    <img src="./img/AnhCatTC/san-pham-noi-bat/sp-2.jpg" alt="sp-2.jpg">
+
+                </div>
+                <div>
+                    <img src="./img/AnhCatTC/san-pham-noi-bat/sp-3.jpg" alt="sp-3.jpg">
+
+                </div>
+                <div>
+                    <img src="./img/AnhCatTC/san-pham-noi-bat/sp-4.jpg" alt="sp-4.jpg">
+
+                </div>
+                <div>
+                    <img src="./img/AnhCatTC/san-pham-noi-bat/sp-1.jpg" alt="sp-1.jpg">
+
+                </div>
+                <div>
+                    <img src="./img/AnhCatTC/san-pham-noi-bat/sp-2.jpg" alt="sp-2.jpg">
+                </div>
+            </div>
+        </div>
+
+    </section>
     <footer>
 
     </footer>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script>
+        $('.carousel').slick({
+            arrows: true,
+            dots: true,
+            infinite: false,
+            speed: 300,
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
+        });
+    </script>
 </body>
 
 </html>
