@@ -372,3 +372,108 @@ span {
 }
 
 /* end why about us */
+
+/* News */
+
+.news-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 46px;
+    color: #2c2e53;
+    padding-top: 100px;
+}
+
+.news-title p {
+    font-family: "Gotham-Ultra";
+    font-size: 30.22px;
+    position: relative;
+    z-index: 1;
+}
+
+.news-title p::after {
+    content: "";
+    width: 160px;
+    height: 10px;
+    background-color: #bd945f;
+    position: absolute;
+    bottom: -12;
+    display: flex;
+    left: -13%;
+    z-index: 1;
+}
+
+.news-content {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    max-width: 1175px;
+
+}
+
+.news-content-left {
+    position: relative;
+    margin-left: 100px;
+}
+
+.news-content-left div {
+    position: absolute;
+    top: 0;
+    height: 150px;
+    background-color: #bd945f;
+    padding-top: 24px;
+    padding-left: 40px;
+    top: 373px
+}
+
+.news-content-left div p:first-child {
+    font-size: 24px;
+    color: #f3f3f3;
+    line-height: 30px;
+}
+
+.news-content-left div p:last-child {
+    margin-top: 0.75rem;
+    font-size: 12px;
+    font-family: "Gotham-Thin";
+    line-height: 12px;
+    text-align: justify;
+    padding-right: 24px;
+}
+
+.news-content-right {
+
+    margin-left: 50px;
+}
+
+.news-content-right p {
+    color: #bd945f;
+}
+
+.news-content-right-item {
+    display: flex;
+    width: 494px;
+    height: 140px;
+    margin-bottom: 24px;
+}
+
+.news-content-right-item img {
+    margin-right: 2rem;
+}
+
+.news-content-right-item div p:first-child {
+    font-size: 18px;
+    color: #bd945f;
+    text-align: justify;
+    line-height: 24px;
+    margin-bottom: 0.75rem;
+}
+
+.news-content-right-item div p:last-child {
+    font-size: 12px;
+    font-family: "Gotham-Thin";
+    text-align: justify;
+    line-height: 1rem;
+}
+
+/* end news */
