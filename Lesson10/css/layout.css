@@ -11,12 +11,17 @@ ul {
     margin: 0;
 }
 
+p {
+    margin: 0;
+}
+
 a {
     text-decoration: none;
 }
 
 body {
     position: relative;
+    background-color: #f3f3f3;
 }
 
 header {
@@ -25,6 +30,7 @@ header {
     position: fixed;
     padding: 1rem 0.75rem;
     width: 100%;
+    z-index: 9;
 }
 
 .container {
@@ -142,16 +148,227 @@ span {
 
 /* featured products */
 
-.slick-prev,
-.slick-next {
-    display: block !important;
-    /* Hiện lên nếu bị ẩn */
-    z-index: 2;
+
+#featured-products {
+    margin-top: 100px;
 }
 
-.slick-prev:before,
-.slick-next:before {
-    color: black;
-    /* Đổi sang màu bạn dễ thấy */
-    font-size: 30px;
+.featured-products-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 60px;
+    color: #2c2e53;
 }
+
+.featured-products-title p {
+    font-family: "Gotham-Ultra";
+    font-size: 30.22px;
+    position: relative;
+}
+
+.featured-products-title p::after {
+    content: "";
+    width: 160px;
+    height: 10px;
+    background-color: #bd945f;
+    position: absolute;
+    top: 100%;
+    display: flex;
+    left: 25%;
+}
+
+.crs-item {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.crs-item-title {
+    font-family: "Gotham-Ultra";
+    color: #2c2e53;
+    margin-top: 1rem;
+}
+
+.crs-item-rating {
+    color: #bd945f;
+}
+
+.crs-item-feature {
+    font-size: 0.75rem;
+    color: #888888;
+}
+
+.crs-item-price {
+    line-height: 0.75rem;
+    font-size: 0.75rem;
+}
+
+/* about-us */
+
+#about-us {
+    height: 1080px;
+    background-image: url(../img/AnhCatTC/ve-chung-toi/bg-about-us.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#about-us div {
+    z-index: 1;
+}
+
+#about-us::after {
+    height: 1080px;
+    background-color: black;
+    content: '';
+    width: 100%;
+    position: absolute;
+    top: 0;
+    opacity: 0.75;
+    z-index: 0;
+}
+
+.about-us-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 60px;
+    color: #f3f3f3;
+    padding-top: 100px;
+}
+
+.about-us-title p {
+    font-family: "Gotham-Ultra";
+    font-size: 30.22px;
+    position: relative;
+    z-index: 1;
+}
+
+.about-us-title p::after {
+    content: "";
+    width: 160px;
+    height: 10px;
+    background-color: #bd945f;
+    position: absolute;
+    bottom: -12;
+    display: flex;
+    left: 15%;
+    z-index: 1;
+}
+
+.about-us-content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 34px;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-us-content .right p {
+    width: 560px;
+    color: #f3f3f3;
+    line-height: 16px;
+    text-align: justify;
+}
+
+.about-us-content .right .right-imgs {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-us-content .right .right-imgs img:last-child {
+    position: relative;
+}
+
+
+.about-us-content .right p {
+    font-size: 12px;
+    margin-bottom: 16px;
+    width: 555px;
+}
+
+
+
+.about-us-content .right p span {
+    font-size: 12px;
+}
+
+.about-us-content .right p:first-child {
+    font-size: 24px;
+    margin-bottom: 16px;
+    line-height: 32px;
+}
+
+.about-us-content .right p:first-child span {
+    font-size: 24px;
+}
+
+
+/* end about-us */
+
+/* why about us */
+.why-about-us .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.why-about-us-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 46px;
+    color: #f3f3f3;
+    padding-top: 100px;
+}
+
+.why-about-us-title p {
+    font-family: "Gotham-Ultra";
+    font-size: 30.22px;
+    position: relative;
+    z-index: 1;
+}
+
+.why-about-us-title p::after {
+    content: "";
+    width: 160px;
+    height: 10px;
+    background-color: #bd945f;
+    position: absolute;
+    bottom: -12;
+    display: flex;
+    left: 35%;
+    z-index: 1;
+}
+
+.why-about-us .row .why-about-us-item {
+    background-color: #f3f3f3;
+    width: 574px;
+    height: 112px;
+    margin: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-left: 40px;
+}
+
+.why-about-us-item-text {
+    margin-left: 35px;
+}
+
+.why-about-us-item-text p:first-child {
+    font-family: "Gotham-Ultra";
+    font-size: 24px;
+    color: #bd945f;
+}
+
+.why-about-us-item-text p:last-child {
+    font-size: 14px;
+
+}
+
+/* end why about us */
