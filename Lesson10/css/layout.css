@@ -474,6 +474,188 @@ span {
     font-family: "Gotham-Thin";
     text-align: justify;
     line-height: 1rem;
+    color: black;
 }
 
 /* end news */
+/* sponsor */
+
+
+.sponsor-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 46px;
+    color: #2c2e53;
+    padding-top: 100px;
+}
+
+.sponsor-title p {
+    font-family: "Gotham-Ultra";
+    font-size: 30.22px;
+    position: relative;
+    z-index: 1;
+}
+
+.sponsor-title p::after {
+    content: "";
+    width: 160px;
+    height: 10px;
+    background-color: #bd945f;
+    position: absolute;
+    bottom: -12;
+    display: flex;
+    left: -13%;
+    z-index: 1;
+}
+
+.sponsor-content {
+    display: flex;
+    justify-content: center;
+}
+
+.sponsor-content img {
+    height: 125px;
+}
+
+/* End sponsor */
+/* Contact */
+
+#contact {
+    margin-top: 130px;
+    height: 300px;
+    background-image: url(../img/AnhCatTC/lienhe-bg.jpg);
+    position: relative;
+    color: #f3f3f3;
+    display: flex;
+
+}
+
+#contact img {
+    position: absolute;
+    top: -160px;
+    left: 36px;
+}
+
+#contact .container {
+    display: flex;
+    align-items: center;
+    padding-left: 185px;
+    justify-content: space-between;
+}
+
+#contact .container div:first-child p:first-child {
+    font-size: 24px;
+    line-height: 24px;
+}
+
+#contact .container div:first-child p:last-child {
+    font-size: 24px;
+    font-family: "Gotham-Ultra";
+    position: relative;
+}
+
+#contact .container div:first-child p:last-child::after {
+    content: "";
+    width: 160px;
+    height: 10px;
+    background-color: #f3f3f3;
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+}
+
+
+.contact-input {
+    font-size: 1rem;
+    line-height: 1rem;
+    margin-right: 50px;
+}
+
+.contact-input p {
+    margin-bottom: 1rem;
+}
+
+.contact-input div input {
+    height: 60px;
+    width: 410px;
+    border: none;
+    padding: 24px;
+}
+
+.contact-input div button {
+    height: 60px;
+    width: 125px;
+    border: none;
+    margin-left: 28px;
+}
+
+/* End contact */
+
+/* Footer */
+
+footer {
+    background-color: #363636;
+    color: #f3f3f3;
+}
+
+footer .container {
+    padding-top: 80px;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    height: 305px;
+}
+
+.footer-title {
+    font-size: 18px;
+    position: relative;
+    margin-bottom: 1rem;
+    line-height: 18px;
+}
+
+.footer-title::after {
+    position: absolute;
+    content: "";
+    height: 5px;
+    width: 90px;
+    background-color: #f3f3f3;
+    left: 0;
+    bottom: -8px;
+}
+
+.thongtinchung span {
+    font-size: 24px;
+    font-family: "Gotham-medium";
+}
+
+.thongtinchung div p {
+    font-family: "Gotham-thin";
+    font-size: 18px;
+}
+
+.thongtinchung div p i {
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+}
+
+.vechungtoi p {
+    font-family: "Gotham-thin";
+    font-size: 18px;
+}
+
+.ketnoi i {
+    margin-left: 35px;
+    margin-top: 2rem;
+    transform: scale(3);
+    width: 36px;
+    height: 36px;
+}
+
+.ketnoi img {
+    width: 150px;
+    height: 55px;
+}
+
+/* End footer */
