@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/layout_manage :: head('Devmaster::Edit')">
+    <title></title>
+</head>
+<body>
+<header th:replace="fragments/layout_manage :: header"></header>
+<section class="container">
+    <h1>Edit</h1>
+    <form th:action="@{/manage/edit}" method="post">
+         <input type="text" name="username" placeholder="username">
+         <input type="text" name="email" placeholder="email">
+         <input type="text" name="password" placeholder="password">
+         <button type="submit">Edit</button>
+     </form>
+</section>
+<section th:replace="fragments/layout_manage :: menu"></section>
+<footer th:replace="fragments/layout_manage :: footer"></footer>
+</body>
+</html>

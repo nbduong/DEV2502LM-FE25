@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head(title)">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title th:title="${title}">manage</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color: #f1f1f1">
+
+
+<header th:fragment="header" class="container d-flex align-items-center bg-white">
+    <a href="/manage">
+        <img src="https://devmaster.edu.vn/images/logo.png" alt="Devmaster Academy">
+    </a>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a th:href="@{/manage/create}" class="nav-link" >them moi</a>
+            </li>
+            <li class="nav-item">
+                <a th:href="@{/manage/edit}" class="nav-link" >Sua thong tin</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<footer th:fragment="footer" class="container d-flex align-items-center alert alert-danger">
+    <div>
+        <img src="https://devmaster.edu.vn/images/logo.png" alt="Devmaster Academy" style="width: 50px">
+        <address>2024 <b>Devmaster Academy</b></address>
+    </div>
+    <nav th:insert="fragments/layout_manage :: menu"></nav>
+</footer>
+
+
+<nav th:fragment="menu">
+    <ul>
+        <li class="nav-item">
+            <a th:href="@{/manage/create}" class="nav-link" >them moi</a>
+        </li>
+        <li class="nav-item">
+            <a th:href="@{/manage/edit}" class="nav-link" >Sua thong tin</a>
+        </li>
+    </ul>
+</nav>
+</body>
+</html>

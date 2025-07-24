@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Gioi thieu ve thymeleaf</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<header class="container d-flex align-items-center">
+    <img src="https://devmaster.edu.vn/images/logo.png" alt="Devmaster Academy">
+</header>
+<section class="container border">
+<div class="alert alert-danger" th:each="user : ${users}">
+    <h2 th:text="*{user.getUsername()}"></h2>
+    <p th:text="*{user.getEmail()}"></p>
+    <p th:text="*{user.getPassword()}"></p>
+</div>
+    <a class="btn btn-primary" th:href="@{/}">Back</a>
+</section>
+</body>
+</html>

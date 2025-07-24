@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/layout :: head(${title})">
+    <title>Devmaster</title>
+</head>
+<body>
+<header th:replace="fragments/layout :: header">
+</header>
+<section class="container" style="min-height: 268px">
+    <div class="row">
+        <h1>Trang chu</h1>
+    </div>
+    <nav th:replace="fragments/layout :: menu"></nav>
+</section>
+<footer th:replace="fragments/layout :: footer">
+</footer>
+</body>
+</html>

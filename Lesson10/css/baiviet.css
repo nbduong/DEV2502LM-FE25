@@ -9,6 +9,10 @@
 
 }
 
+.navigation p:last-child p:first-child {
+    color: #bd945f;
+}
+
 #baiviet .container {
     padding-left: 50px;
 }

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/layout_manage :: head('Devmaster::Manage')">
+    <title></title>
+</head>
+<body>
+<header th:replace="fragments/layout_manage :: header"></header>
+<section class="container">
+    <h1>Manage</h1>
+    <table class="table">
+        <tr>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Password</th>
+        </tr>
+        <tr th:each="user : ${users}">
+            <td th:text="*{user.getUsername()}"></td>
+            <td th:text="*{user.getEmail()}"></td>
+            <td th:text="*{user.getPassword()}"></td>
+        </tr>
+    </table>
+</section>
+<section th:replace="fragments/layout_manage :: menu"></section>
+<footer th:replace="fragments/layout_manage :: footer"></footer>
+</body>
+</html>
