@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Product Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body style="background-color: #ccc">
+<section class="container bg-white mt-5 p-3">
+    <form th:action="@{/product/create}" th:object="${product}" method="post">
+        <div class="card m-3">
+            <div class="card-header">
+                <h1 th:text="${product.id != null ? 'Edit Product' : 'Create product'}">Product Form</h1>
+            </div>
+            <div class="card-body">
+                <input type="hidden" th:if="${product.id != null}" th:value="${product.id}" name="id">
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label">Product Name:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" th:field="*{name}" required>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label">ImageUrl:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" th:field="*{imageUrl}" required>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label">Quantity:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" th:field="*{quantity}" required>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label">Product Price:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" th:field="*{price}" required>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label">Product Name:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" th:field="*{name}" required>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label">Content:</label>
+                    <div class="col-sm-10">
+                        <textarea type="checkbox" class="form-control" th:field="*{content}" required>
+                            </textarea>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label">Category:</label>
+                    <div class="col-sm-10">
+                        <select th:field="*{category.id}" class="form-control" required>
+                            <option th:each="category : ${categories}" th:value="${category.id}" th:text="${category.name}"></option>
+                        </select>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <button type="submit" class="btn btn-success" th:text="${category.id != null ? 'Update' : 'Create'}">Save</button>
+                <a th:href="@{/category}" class="btn btn-secondary">Back to list</a>
+            </div>
+        </div>
+    </form>
+</section>
+</body>
+</html>
